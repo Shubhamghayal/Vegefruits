@@ -1,0 +1,21 @@
+{% extends './base.html'%}
+{% block content %}
+{% load static %}
+{% for e in c %}
+<tr>
+<div  class="card" style="width: 18rem;">
+    <ul>
+
+   <a href="/showproducts/{{e.slug}}"><li>{{e.categoryname}}</li></a>
+
+  </ul>
+</div>
+
+    </tr>
+
+{% endfor %}
+{% for e in c %}
+    <img src="{{ e.cat_image.url }}" class="rounded float-start" height="200px" width="200px" alt="..." style="margin-left:100px;">
+{% endfor %}
+
+{% endblock %}

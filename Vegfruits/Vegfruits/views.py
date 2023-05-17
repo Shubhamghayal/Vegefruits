@@ -24,7 +24,7 @@ def signin(request):
             user=authenticate(username=uname,password=upass)
             if user is not None:
                 login(request,user)
-                return render(request, 'base.html')
+                return render(request, 'base.html',{'user':user})
 
     else:
         fm = AuthenticationForm()

@@ -1,0 +1,32 @@
+{% extends './base.html'%}
+{% block content %}
+{% load static %}
+
+<div class="row">
+   {% for product in product %}
+   <div class="col-sm-4">
+      <figure class="card card-product-grid">
+          <div class="img-wrap" >
+
+<a href="{{ product.get_url }}"><img src="{{ product.images.url }}" style="height:200px;width:200px;"></a>
+
+</div> <!-- img-wrap.// -->
+<figcaption class="info-wrap">
+<div class="fix-height">
+<a href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
+<div class="price-wrap mt-2">
+<span class="price">Rs{{ product.price }}</span>
+
+</div> <!-- price-wrap.// -->
+</div>
+<a href="/add_cart/{{product.id}}" class="btn btn-success">Add to cart </a>
+</figcaption>
+</figure>
+</div> <!-- col.// -->
+{% endfor %}
+</div> <!-- row end.// -->
+
+
+
+
+{% endblock %}

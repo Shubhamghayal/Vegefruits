@@ -28,6 +28,6 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
     path('blog/', blog, name='blog'),
-    # path('',include('shop.urls')),
+    path('',include('shop.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
