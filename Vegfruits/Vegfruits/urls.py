@@ -29,5 +29,6 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('blog/', blog, name='blog'),
     path('',include('shop.urls')),
+    path('',include('cart.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

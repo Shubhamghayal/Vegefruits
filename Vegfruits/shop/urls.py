@@ -7,4 +7,5 @@ urlpatterns = [
     path('showproducts/<slug:category>/',showproducts),
 
 
+
 ]
